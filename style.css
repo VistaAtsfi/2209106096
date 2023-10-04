@@ -1,0 +1,402 @@
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ac8c62;
+    padding: 10px 20px;
+    color: #4f432e;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: auto; 
+}
+
+.brand {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4f432e;
+    margin-right: 20px; 
+}
+
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.theme-switch input[type="checkbox"] {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ac8c62;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider.round {
+    border-radius: 20px;
+}
+
+.theme-switch input[type="checkbox"]:checked + .slider {
+    background-color: #ac8c62;
+}
+
+.theme-switch em {
+    margin-left: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style-type: none;
+}
+
+/* #burgerbar {
+    display: block;
+    width: 36px;
+    background-color: #4f432e;
+    border: none;
+    cursor: pointer;
+} */
+
+.menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #4f432e; 
+}
+
+/* Styling Main Content */
+main {
+    background-color: #e3caa9;
+    padding: 20px 0;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.instrument-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* Styling individual instrument box */
+.instrument {
+    background-color: #f4e7cb;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(74, 74, 74, 0.537);
+}
+
+.instrument img {
+    width: 8cm;
+    height: 7cm;
+}
+
+/* Styling deskripsi instrument */
+.instrument-description {
+    margin-top: 10px;
+}
+
+/* Styling Footer */
+footer {
+    background-color: #ac8c62;
+    color: #4f432e;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Foto */
+.foto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.foto {
+    border: 5px solid #4f432e;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+}
+.foto-bulat {
+    width: 2cm;
+    height: 2cm;
+    border-radius: 50%;
+}
+
+/* light mode
+body.light-mode {
+    background-color: #e3caa9;
+    color: #4f432e;
+}
+
+.header.light-mode {
+    background-color: #ac8c62;
+    color: #4f432e;
+}
+
+.container.light-mode {
+    background-color: #e3caa9;
+}
+
+.main.light-mode {
+    background-color: #e3caa9;
+}
+
+/* Gaya tombol untuk light mode */
+/* #lightModeButton {
+    display: none; /* Tombol light mode akan disembunyikan dalam mode light */
+/* } */
+
+/* #darkModeButton { */
+    /* display: block; Tombol dark mode akan ditampilkan dalam mode light */
+/* } */
+  
+  /* Dark mode */
+/* body.dark-mode {
+    background-color: #524949;
+    color: #dec6a2; */
+/* }
+
+.header.dark-mode {
+    background-color: #524949;
+    color: #dec6a2;
+}
+
+.container.dark-mode {
+    background-color: #524949;
+}
+
+.main.dark-mode {
+    background-color: #524949;
+} */
+
+/* Gaya tombol untuk dark mode */
+/* #darkModeButton { */
+    /* display: none; Tombol dark mode akan disembunyikan dalam mode dark */
+/* } */
+
+/* #lightModeButton {
+    display: block; /* Tombol light mode akan ditampilkan dalam mode dark */
+/* }  */ 
+
+/* [data-theme="dark"] {
+    --primary-color: #685327da;
+    --secondary-color: #926f41ef;
+    --font-color: #dac19b;
+    --bg-color: #7d643eee;
+    --heading-color: #865f38;
+} */
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --primary-color: #685327da;
+    --secondary-color: #926f41ef;
+    --font-color: #dac19b;
+    --bg-color: #7d643eee;
+    --heading-color: #865f38;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    em {
+      margin-left: 10px;
+      font-size: 1rem;
+    }
+  }
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  .theme-switch input {
+    display:none;
+  }
+  .slider {
+    background-color: #e1c392;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  input:checked + .slider {
+    background-color: #ad9562;
+  }
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  .slider.round {
+    border-radius: 34px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/* Pop up */
+/* #welcomeModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ac8c62(0,0,0,0.7);
+    z-index: 1;
+} */
+
+/*  Modal Selamat Datang */
+/* #welcomeModal .modal-content {
+    background-color: #ac8c62;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #4f432e;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+} */
+
+/* Tombol "OK" pada modal */
+/* #closeWelcomeModal {
+    background-color:#865f38;
+    color: #4f432e;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+} */
+
+/* #closeWelcomeModal:hover {
+    background-color: #f4e7cb ;
+} */
+
+/* Pop up notifikasi */
+.notification {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #e3caa9;
+    color: #4f432e;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+Modal Selamat Datang
+#welcomeModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+/* addEventListener */
+#welcomeModal .modal-content {
+    background-color: #ad9562;
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid #4f432e;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+}
+
+/* Tombol "Lanjut ke About Me" dan "Lanjut ke Contact" */
+#aboutMeButton, #contactButton {
+    background-color: #4f432e;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#aboutMeButton:hover, #contactButton:hover {
+    background-color: #865f38;
+}
