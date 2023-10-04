@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
+
+    <label class="theme-switch" for="aboutMeCheckbox">
+        <input type="checkbox" id="aboutMeCheckbox" />
+        <div class="slider round"></div>
+    </label>
+    <em id="about-me-theme-label">Dark Mode</em>
+
 </head>
 <body bgcolor="#f4e7cb">
     <header class="header">
@@ -20,5 +27,41 @@
         <h3 style="color: #4f432e; margin-left: 10px;">No. Telp    : 08135797531</h3>
         <h3 style="color: #4f432e; margin-left: 10px;">WhatsApp    : 08135797531</h3>
         <h3 style="color: #4f432e; margin-left: 10px;">Instagram   : <a href="https://instagram.com/vista.lyna?igshid=MzMyNGUyNmU2YQ==">vista.lyna</a></h3>
+
+        <script>
+            const aboutMeThemeSwitch = document.querySelector('#aboutMeCheckbox');
+        
+            // Fungsi untuk mengaktifkan Dark Mode
+            function enableAboutMeDarkMode() {
+                document.body.setAttribute('data-theme', 'dark');
+            }
+        
+            // Fungsi untuk menonaktifkan Dark Mode
+            function disableAboutMeDarkMode() {
+                document.body.removeAttribute('data-theme');
+            }
+        
+            // Event listener untuk tombol switch di halaman "About Me"
+            aboutMeThemeSwitch.addEventListener('change', function () {
+                if (this.checked) {
+                    enableAboutMeDarkMode();
+                } else {
+                    disableAboutMeDarkMode();
+                }
+            });
+        
+            // Fungsi untuk memeriksa preferensi tema
+            function checkAboutMeThemePreference() {
+                const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (prefersDarkMode) {
+                    enableAboutMeDarkMode();
+                    aboutMeThemeSwitch.checked = true;
+                }
+            }
+        
+            // Panggil fungsi untuk memeriksa preferensi tema saat halaman dimuat
+            checkAboutMeThemePreference();
+        </script>    
+        
 </body>
 </html>
